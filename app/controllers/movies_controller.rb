@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
   end
 
   def movie_titles
-    movie = Movie.group(:title)
+    movie = Movie.select(:title)
     render json: movie.as_json
   end
 end
