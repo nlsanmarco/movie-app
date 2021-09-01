@@ -1,0 +1,52 @@
+
+GET http://localhost:3000/actors
+###
+GET http://localhost:3000/actors/2
+###
+
+POST http://localhost:3000/actors
+Content-Type: application/json
+
+{
+  "first_name": "Will",
+  "last_name": "Farrell",
+  "known_for": "Talledega Nights",
+  "gender": "male",
+  "age": 54
+}
+###
+PATCH http://localhost:3000/actors/6
+Content-Type: application/json
+
+{
+  "gender": "male",
+  "age": 54
+}
+
+###
+DELETE http://localhost:3000/actors/7
+###
+GET http://localhost:3000/movies
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Ben Hur",
+  "year": "1959",
+  "plot": "After a Jewish prince is betrayed and sent into slavery by a Roman friend, he regains his freedom and comes back for revenge.",
+  "director": "William Wyler",
+  "english": true
+}
+###
+PATCH http://localhost:3000/movies/3
+Content-Type: application/json
+
+{
+  "director": "Steven Spielberg"
+}
+
+###
+DELETE http://localhost:3000/movies/5
+###
