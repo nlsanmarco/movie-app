@@ -18,8 +18,11 @@ class ActorsController < ApplicationController
       age: params[:age],
       movie_id: params[:movie_id],
     )
-    actor.save
-    render json: actor
+    if actor.save
+      render json: actor
+    else
+      render json: actor.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -30,8 +33,11 @@ class ActorsController < ApplicationController
     actor.gender = params[:gender] || actor.gender
     actor.age = params[:age] || actor.age
     actor.movie_id = params[:movie_id] || actor.movie_id
-    actor.save
-    render json: actor
+    if actor.save
+      render json: actor
+    else
+      render json: actor.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   def destroy

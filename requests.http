@@ -8,11 +8,11 @@ POST http://localhost:3000/actors
 Content-Type: application/json
 
 {
-  "first_name": "Will",
-  "last_name": "Farrell",
-  "known_for": "Talledega Nights",
-  "gender": "male",
-  "age": 54
+  "first_name": "",
+  "last_name": "",
+  "known_for": "",
+  "gender": "",
+  "age": 2
 }
 ###
 PATCH http://localhost:3000/actors/6
@@ -20,7 +20,7 @@ Content-Type: application/json
 
 {
   "gender": "male",
-  "age": 54
+  "age": 12
 }
 
 ###
@@ -33,10 +33,10 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "title": "Ben Hur",
-  "year": "1959",
-  "plot": "After a Jewish prince is betrayed and sent into slavery by a Roman friend, he regains his freedom and comes back for revenge.",
-  "director": "William Wyler",
+  "title": "",
+  "year": "",
+  "plot": "",
+  "director": "",
   "english": true
 }
 ###
@@ -44,7 +44,7 @@ PATCH http://localhost:3000/movies/3
 Content-Type: application/json
 
 {
-  "director": "Steven Spielberg"
+  "director": ""
 }
 
 ###
