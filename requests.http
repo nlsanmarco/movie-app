@@ -1,11 +1,18 @@
-
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2NjI3OTB9.XwsLKYJlqKHGnqILWC7eraHztIs92zT4P63JMQ9wA2U
+### Actors index
 GET http://localhost:3000/actors
-###
-GET http://localhost:3000/actors/2
-###
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
+###Actors show
+GET http://localhost:3000/actors/2
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### Actors Create
 POST http://localhost:3000/actors
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
   "first_name": "",
@@ -14,23 +21,31 @@ Content-Type: application/json
   "gender": "",
   "age": 2
 }
-###
+
+### Actors Update
 PATCH http://localhost:3000/actors/6
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
   "gender": "male",
   "age": 12
 }
 
-###
+### Actors Delete
 DELETE http://localhost:3000/actors/7
-###
-GET http://localhost:3000/movies
-###
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
+### Movies Index
+GET http://localhost:3000/movies
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### Movies Create
 POST http://localhost:3000/movies
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
   "title": "",
@@ -39,14 +54,38 @@ Content-Type: application/json
   "director": "",
   "english": true
 }
-###
+
+### Movies Update
 PATCH http://localhost:3000/movies/3
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
   "director": ""
 }
 
-###
+### Movies Delete
 DELETE http://localhost:3000/movies/5
-###
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### Users create (signup)
+  POST http://localhost:3000/users
+  Content-Type: application/json
+
+  {
+    "name": "Polly",
+    "email": "polly@gmail.com",
+    "password": "password",
+    "password_confirmation": "password"
+  }
+ 
+### Sessions create (login)
+  POST http://localhost:3000/sessions
+  Content-Type: application/json
+
+  {
+    "email": "minnie@gmail.com",
+    "password": "password"
+  }
+
