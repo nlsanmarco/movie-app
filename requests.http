@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE4MDc3NjN9.wlTm5IF7H4rHPsI3z7VhgOTlyn5xFXX3a6tY6oOdQZA
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzE4MjgyMjB9.nbB_gJX7yzqSfCM8t1fPEdEJjewkZX18_VFVCW3VpvI
 ### Actors index
 GET http://localhost:3000/actors
 Content-Type: application/json
@@ -90,7 +90,17 @@ Authorization: Bearer {{jwt}}
   Content-Type: application/json
 
   {
-    "email": "minnie@gmail.com",
+    "email": "polly@gmail.com",
     "password": "password"
   }
 
+### Movie Genre create
+
+POST http://localhost:3000/movie_genres
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "movie_id": 1,
+  "genre_id": 6
+}
