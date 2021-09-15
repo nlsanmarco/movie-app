@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2NjI3OTB9.XwsLKYJlqKHGnqILWC7eraHztIs92zT4P63JMQ9wA2U
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE4MDc3NjN9.wlTm5IF7H4rHPsI3z7VhgOTlyn5xFXX3a6tY6oOdQZA
 ### Actors index
 GET http://localhost:3000/actors
 Content-Type: application/json
@@ -39,6 +39,11 @@ Authorization: Bearer {{jwt}}
 
 ### Movies Index
 GET http://localhost:3000/movies
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### Movies Show
+GET http://localhost:3000/movies/3
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 

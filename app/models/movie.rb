@@ -11,10 +11,9 @@ class Movie < ApplicationRecord
     genre_names = []
     index = 0
     while index < genres.length
-      
-      @genre_names = movie.genres[index].name
+      genre_names << genres[index].name
       index += 1
     end
-    @genre_names
+    genre_names
   end
 end
